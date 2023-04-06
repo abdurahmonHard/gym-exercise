@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react'
-// ma'lumotlarni olish, DOMni to'g'ridan-to'g'ri yangilash va taymerlar.
 import { Box, Button, Stack, TextField, Typography} from '@mui/material'
 
 import { exerciseOptions, fetchData } from '../utils/fetchData';
@@ -11,10 +10,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
 
     useEffect(() => {
         const fetchExercisesData = async () => {
-     
-     
             const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', exerciseOptions);
-    
             setBodyParts(['all', ...bodyPartsData]);
         };
     
