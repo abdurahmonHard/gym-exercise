@@ -11,17 +11,14 @@ const Detail = ({ exerciseDetail }) => {
 
     const extraDetail = [
         {
-        id: 1,
         icon: BodyPartImage,
         name: bodyPart,
         },
         {
-        id: 2,
         icon: TargetImage,
         name: target,
         },
         {
-        id: 3,
         icon: EquipmentImage,
         name: equipment,
         },
@@ -57,3 +54,5 @@ const Detail = ({ exerciseDetail }) => {
     }
 
 export default Detail
+
+
