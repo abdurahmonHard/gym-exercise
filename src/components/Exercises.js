@@ -14,7 +14,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
   const indexOfLastExercise = currentPage * exercisesPerPage;
   const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
   const currentExercises = exercises.slice(indexOfFirstExercise, indexOfLastExercise);
-
+console.log(exercises)
   const paginate = (event, value) => {
     setCurrentPage(value);
 
@@ -30,12 +30,12 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
       } else {
         exercisesData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`, exerciseOptions);
       }
-
+      console.log('Fetched exercises data:', exercisesData); // Tekshirish uchun
       setExercises(exercisesData);
     };
 
     fetchExercisesData();
-  }, [bodyPart]);
+  }, [bodyPart, setExercises]);
 
 
   return (
